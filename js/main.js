@@ -1,14 +1,61 @@
-var montoCapital = parseFloat(prompt("Ingrese el Capital"));
+//Validación del importe de Capital Ingresado
+while (true) {
+  var montoCapital = parseFloat(prompt("Ingrese el Capital"));
+
+  if (
+    !isNaN(montoCapital) &&
+    montoCapital != null &&
+    montoCapital != "" &&
+    montoCapital > 0
+  ) {
+    break;
+  } else {
+    alert("El valor ingresado no es número válido.");
+    continue;
+  }
+}
 document.write("<h3> Capital: " + montoCapital + "</h3>");
 
-var nroPeriodos = parseInt(
-  prompt("Ingrese el numero de periodos de inversión")
-);
+//Validación del número de periodos
+while (true) {
+  var nroPeriodos = parseInt(
+    prompt("Ingrese el numero de periodos de inversión")
+  );
+
+  if (
+    !isNaN(nroPeriodos) &&
+    nroPeriodos != null &&
+    nroPeriodos != "" &&
+    nroPeriodos > 0
+  ) {
+    break;
+  } else {
+    alert("El valor ingresado no es número válido.");
+    continue;
+  }
+}
+
 document.write("<h3> Nro. Periodos de Inversión : " + nroPeriodos + "</h3>");
 
-var tasaMensual = parseFloat(
-  prompt("Ingrese la tasa mensual en formato decimal Ejm. 4%=0.04")
-);
+//Validación de la tasa mensual
+while (true) {
+  var tasaMensual = parseFloat(
+    prompt("Ingrese la tasa mensual en formato decimal Ejm. 4%=0.04")
+  );
+
+  if (
+    !isNaN(tasaMensual) &&
+    tasaMensual != null &&
+    tasaMensual != "" &&
+    tasaMensual > 0
+  ) {
+    break;
+  } else {
+    alert("El valor ingresado no es número válido.");
+    continue;
+  }
+}
+
 document.write("<h3> Tasa de Interés Mensual: " + tasaMensual + "</h3>");
 
 function CuotaCapital(montoCapital, nroPeriodos) {
